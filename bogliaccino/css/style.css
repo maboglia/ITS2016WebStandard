@@ -1,0 +1,6 @@
+#header h1 {color: #999; font-size: 3em;}
+p {font-size: 1.2em; line-height: 1.1em;}
+div {border:0px solid #ccc; padding:1em;}
+#header, #container,#footer, #nav { width:95%; margin:0 auto; clear:both;height: auto;}
+#content {width:60%; float:left;}
+#sidebar {width: 30%; float:right;}
