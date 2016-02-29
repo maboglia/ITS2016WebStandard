@@ -111,10 +111,10 @@ var miaVariabile3 = 'scrivo qualcosa';
 var miaVariabile4 = true;
 var miaVariabile5 = miaVariabile * miaVariabile2;
 
-if(miaVariabile > 10) 
-	alert(miaVariabile4);
-else
-	console.log(miaVariabile3);
+// if(miaVariabile > 10) 
+// 	alert(miaVariabile4);
+// else
+// 	console.log(miaVariabile3);
 
 //questo è un commento su una riga
 miaVariabile2 = 4;
@@ -130,21 +130,47 @@ miaVariabile5 =  miaVariabile * miaVariabile2;
 
 
 
-console.log(miaVariabile + miaVariabile2);
+//console.log(miaVariabile + miaVariabile2);
 //alert(miaVariabile + miaVariabile2);
 
-function miaFunzione(x, y){
+function faiAddizioni(x, y){
 	// alert("messaggio dalla funzione");
-	console.log("rimessaggio dalla mia funzione");
+	//console.log("rimessaggio dalla mia funzione");
 
 	//memorizzo in una variabile locale il risultato della somma tra due variabili esterne
-	 somma = x + y;
+	if (x <10) 
+		x=10;
 
-	console.log("Il valore della somma delle variabili è "      +        somma);
+	var somma = x + y;
+
+	//console.log("Il valore della somma delle variabili è "      +        somma);
+
+	//ritorna il valore dell'addizione e interrompe il flusso del codice della funzione
+	return somma;
+
 
 }
 
-miaFunzione(miaVariabile, miaVariabile2);
-console.warn(somma);
+// console.log(faiAddizioni(5,4));
+//alert(faiAddizioni(5,4));
+var somma1 = faiAddizioni(6,5);
+var somma2 = faiAddizioni(51,14);
+var somma3 = faiAddizioni(somma1, somma2);
+
+function modificaPagina(){
+
+
+
+var barralaterale = document.getElementById("sidebar");
+var nuovaTestatina = document.createElement("h1");
+nuovaTestatina.innerHTML = "testo nuova testatina";
+barralaterale.innerHTML = "";
+barralaterale.appendChild(nuovaTestatina);
+
+//document.write(barralaterale.innerHTML);
+//document.write(miaVariabile3 + miaVariabile3);
+}
+
+//console.log(somma3);
 
 
