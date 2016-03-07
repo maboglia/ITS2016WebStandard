@@ -1,31 +1,84 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
+	    <meta charset="utf-8">   
 		<title>mauro bogliaccino</title>
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/style.css" />
 	</head>
 	<body>
-		<div id="header">
-			<h1>hello world con javascript</h1>
-		</div>
-		<div id="nav">
-			<a href="#home" onclick="modificaPagina()" title="">home</a>
-			<a href="#footer" title="">footer</a>
-		</div>	
-		<div id="container">
-			<div id="content">
-				<p>benvenuto nel mio sito web</p>
-				<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+		<header id="header">
+			<h1>Laboratorio Web Standard 2</h1>
+			<blockquote style="color: #888888;font-size:12px;">
+				Questa è una citazione famosa.
+				<cite>Mauro Bogliaccino</cite>
+			</blockquote>
 
-			</div>
-			<div id="sidebar" align="justify">
-				<h1>sidebar</h1>
-				<p>lLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
-			</div>
-		</div>
-		<div id="footer">
-				<h1>footer</h1>
-		</div>
+		</header> 
+		<nav id="nav">
+			<a href="#home" onclick="ripristina_home()" title="">home</a>
+			<a href="#footer" onclick="restore_main()"  title="">main</a>
+			<a href="#footer" onclick="restore_footer()"  title="">footer</a>
+		</nav>
+<!-- inizio container -->
+	<div id="container">
+		<main id="main">
+
+<!-- modello pagina
+
+			<section id="" class="">
+				<header>
+					<h2></h2>
+				</header>
+				<article>
+				</article>
+				<footer>
+				</footer>
+			</section>
+ -->
+			<section id="demo">
+				<header>
+					<h2 id="demoSectionTitle">Section Header demo</h2>
+				</header>
+				<article>
+					<h2 id="demoArticleTitle">
+						Section Article
+					</h2>
+					<p id="first_paragraph">Articolo</p>
+					<p id="second_paragraph"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+				</article>
+				<footer>
+					<h2 id="demoFooterTitle">Section footer</h2>
+				</footer>
+			</section>
+		</main>
+
+		<aside id="right_sidebar">
+			<section>
+				<header>
+					<h2>funzioni javascript</h2>
+				</header>
+				<ul>
+					<li><a href="#" onclick="alert('hello world!')" title="">alert</a></li>
+					<li>console 
+						<a href="#" onclick="console.log('hello world!')" title="">log</a> 
+						<a href="#" onclick="console.warn('hello world!')" title="">warn</a> 
+						<a href="#" onclick="console.error('hello world!')" title="">error</a> 
+					</li>
+					
+
+					<li><a href="#" onclick="modificaDOM()" title="">Modifica DOM</a></li>
+
+				</ul>
+			</section>
+		</aside>
+	</div>	
+<!-- fine container -->
+
+		<footer id="footer">
+			
+			<h2>Main footer</h2>
+			
+		</footer>
 
 	<script src="js/myscript.js"></script>	
 

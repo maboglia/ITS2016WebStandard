@@ -157,6 +157,8 @@ var somma1 = faiAddizioni(6,5);
 var somma2 = faiAddizioni(51,14);
 var somma3 = faiAddizioni(somma1, somma2);
 
+
+
 function modificaPagina(){
 
 
@@ -172,5 +174,22 @@ barralaterale.appendChild(nuovaTestatina);
 }
 
 //console.log(somma3);
+
+//individua elementi della pagina by Id
+
+var header = document.getElementById("header");
+var titoloDemo = document.getElementById("demoArticleTitle");
+
+function modificaDOM() {
+	header.style.border = "3px dotted #fc3";
+	titoloDemo.style.color = "#fc3";
+}
+
+
+function ripristina_home() {
+	header.style.border = "none";
+	titoloDemo.style.color = "black";
+}
+
 
 
