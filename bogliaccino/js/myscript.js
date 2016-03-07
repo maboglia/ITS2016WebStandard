@@ -1,3 +1,4 @@
+//alert("funziona!");
 /*
 
 6+4
@@ -176,13 +177,75 @@ barralaterale.appendChild(nuovaTestatina);
 //console.log(somma3);
 
 //individua elementi della pagina by Id
-
 var header = document.getElementById("header");
+var container = document.getElementById("container");
+var nav = document.getElementById("nav");
+var footer = document.getElementById("footer");
+var demo = document.getElementById("demo");
+var main = document.getElementById("main");
+var first_paragraph = document.getElementById("first_paragraph");
+var second_paragraph = document.getElementById("second_paragraph");
+var demoSectionTitle = document.getElementById("demoSectionTitle");
+var right_sidebar = document.getElementById("right_sidebar");
 var titoloDemo = document.getElementById("demoArticleTitle");
 
+
+//individua elementi della pagina by tagname
+var allLinks = document.getElementsByTagName("a");
+var allH2 = document.getElementsByTagName("h2");
+var unorderedLists = document.getElementsByTagName("ul");
+var orderedLists = document.getElementsByTagName("ol");
+var mainContent = document.getElementsByTagName("main");
+
+//combinati
+var linkNav = document.getElementById("nav").getElementsByTagName("a");
+//equivale a scrivere:
+//var linkNav = nav.getElementsByTagName("a");
+var linkSide = document.getElementById("right_sidebar").getElementsByTagName("a");
+
+
+function elencoAllievi() {
+		first_paragraph.innerHTML = "Elenco allievi";
+		second_paragraph.innerHTML = "";
+		var allievi = [
+			"Avvisato",//allievi[0]
+			"Barbero",//allievi[1]
+			"Bavato",//allievi[2]
+			"Brandozzi",//allievi[3]
+			"Borgo",//allievi[4]
+			"Brean"//allievi[5]
+		];
+			var testo = "";
+		for (var i = 0; i < allievi.length; i++) {
+		
+			testo += "<li>" + allievi[i] + "</li>";
+		//alert(allievi[i]);
+						
+		};
+
+		second_paragraph.innerHTML = "<ol>" +testo+"</ol>";
+
+}
+
+
 function modificaDOM() {
+
 	header.style.border = "3px dotted #fc3";
 	titoloDemo.style.color = "#fc3";
+
+
+
+	allLinks.style.color = "red";
+}
+
+
+
+function infoDOM() {
+	//tutti i link della pagina sono:
+	console.log("Tipo di nodo: " + right_sidebar.nodeType);
+	console.warn("Il contenuto di demo: " + demo.innerHTML);
+	console.log("I link in questo documento sono: " + allLinks.length);
+	console.info("I link nella sidebar sono: " + linkSide.length);
 }
 
 
