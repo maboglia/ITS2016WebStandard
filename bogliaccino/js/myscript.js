@@ -223,7 +223,7 @@ function elencoAllievi() {
 						
 		};
 
-		second_paragraph.innerHTML = "<ol>" +testo+"</ol>";
+		second_paragraph.innerHTML = "<ol>" +testo+"</ol>" ;
 
 }
 
