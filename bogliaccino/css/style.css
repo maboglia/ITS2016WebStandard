@@ -20,3 +20,5 @@ main {width:60%; float:left;}
 blockquote > cite {
 	text-transform: uppercase;
 }
+
+.bkg_red{background-color: #C00;}

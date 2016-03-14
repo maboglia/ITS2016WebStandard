@@ -188,6 +188,7 @@ var second_paragraph = document.getElementById("second_paragraph");
 var demoSectionTitle = document.getElementById("demoSectionTitle");
 var right_sidebar = document.getElementById("right_sidebar");
 var titoloDemo = document.getElementById("demoArticleTitle");
+var titoloArticolo = document.getElementById("demoArticleTitle");
 
 
 //individua elementi della pagina by tagname
@@ -197,24 +198,36 @@ var unorderedLists = document.getElementsByTagName("ul");
 var orderedLists = document.getElementsByTagName("ol");
 var mainContent = document.getElementsByTagName("main");
 
+
+// body.onload = function () {
+// 	scriviTitolo("caricato il DOM");
+// } ;
+
 //combinati
 var linkNav = document.getElementById("nav").getElementsByTagName("a");
 //equivale a scrivere:
 //var linkNav = nav.getElementsByTagName("a");
 var linkSide = document.getElementById("right_sidebar").getElementsByTagName("a");
 
+//array di allievi
+		var allievi = [
+			"Avvisato", "Barbero", "Bavato", "Brandozzi", "Borgo", "Brean", "Castagno", "Delmastro", "Lanzetti", "Lo Rillo", "Narese", "Paschetta", "Perrone", "Piazza", "Quartero", "Quatrale", "Savasta", "Scudeler", "Spano", "Zeppegno", "Bianco", "Contessa", "Donofrio", "Libore", "NKomp", "Sacchetto", "Salarzehi", "Torresin"    ];
+
+function scriviTitolo (argument) {
+	titoloArticolo.innerHTML = argument;
+}
+
+function scriviArticolo (argument1,argument2) {
+	first_paragraph.innerHTML = argument1;
+	second_paragraph.innerHTML = argument2;
+}
+
+
 
 function elencoAllievi() {
-		first_paragraph.innerHTML = "Elenco allievi";
+		first_paragraph.innerHTML = "<h3>Elenco allievi</h3>";
 		second_paragraph.innerHTML = "";
-		var allievi = [
-			"Avvisato",//allievi[0]
-			"Barbero",//allievi[1]
-			"Bavato",//allievi[2]
-			"Brandozzi",//allievi[3]
-			"Borgo",//allievi[4]
-			"Brean"//allievi[5]
-		];
+
 			var testo = "";
 		for (var i = 0; i < allievi.length; i++) {
 		
@@ -233,14 +246,12 @@ function modificaDOM() {
 	header.style.border = "3px dotted #fc3";
 	titoloDemo.style.color = "#fc3";
 
-
-
-	allLinks.style.color = "red";
 }
 
 
 
 function infoDOM() {
+	demo.innerHTML = "<h1>prova</h1>";
 	//tutti i link della pagina sono:
 	console.log("Tipo di nodo: " + right_sidebar.nodeType);
 	console.warn("Il contenuto di demo: " + demo.innerHTML);
@@ -252,7 +263,47 @@ function infoDOM() {
 function ripristina_home() {
 	header.style.border = "none";
 	titoloDemo.style.color = "black";
+
+	scriviTitolo("<h1>titolo iniziale</h1>");
+	scriviArticolo("<p>Primo paragrafo: articolo</p", "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  </p>");
+
 }
 
+function tabellina () {
+	//inizializzo la variabile test con una tabella html
+	var test = ("<table border='1'>");
+		//ciclo for
+		for (var i = 1; i <= 10; i++) {
+			//stampo le righe
+			test += ('<tr>');
+				//stampo le colonne
+				for (var j = 1; j <= 10; j++) {
+					if ((i * j ) % 2 == 0)
+					test += ('<td class="bkg_red">');
+					else
+					test += ('<td>');
+
+					//calcolo il prodotto di riga x colonna
+					test += i * j ;					
+					test += ('</td>');
+				};
+
+			test += ('</tr>');
+
+		};
+
+	//chiudo la tabella html
+	test += "</table>";
+
+	scriviArticolo("<h3>Tavola Pitagorica</h3", test);
+}
+
+function potenze() {
+	document.writeln("Stampo i primi 15 quadrati");	
+	for (var i = 1; i < 15; i++) {
+		  document.writeln(i*i);
+	};
 
 
+
+}
