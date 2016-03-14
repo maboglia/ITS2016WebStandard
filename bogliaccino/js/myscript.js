@@ -199,10 +199,6 @@ var orderedLists = document.getElementsByTagName("ol");
 var mainContent = document.getElementsByTagName("main");
 
 
-// body.onload = function () {
-// 	scriviTitolo("caricato il DOM");
-// } ;
-
 //combinati
 var linkNav = document.getElementById("nav").getElementsByTagName("a");
 //equivale a scrivere:
@@ -304,6 +300,8 @@ function potenze() {
 		  document.writeln(i*i);
 	};
 }
+
+//abbiamo utilizzato un metodo per rilevare da javascript il click su un elemento  del DOM
 titoloArticolo.onclick = function cambiaColore (argument) {
 	var colore = prompt("Qual è il tuo colore preferito", "Scrivi qui il tuo colore preferito");
 
