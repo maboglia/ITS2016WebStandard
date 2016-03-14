@@ -303,7 +303,12 @@ function potenze() {
 	for (var i = 1; i < 15; i++) {
 		  document.writeln(i*i);
 	};
+}
+titoloArticolo.onclick = function cambiaColore (argument) {
+	var colore = prompt("Qual è il tuo colore preferito", "Scrivi qui il tuo colore preferito");
 
-
+	scriviTitolo("il mio colore preferito è " + colore);
+	titoloArticolo.style.color = colore;
 
 }
+
