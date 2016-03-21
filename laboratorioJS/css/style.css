@@ -12,13 +12,11 @@
 
 p {font-size: 1.2em; line-height: 1.1em;}
 div {border:0px solid #ccc; padding:1em;}
-#header, #footer, #nav , #container { width:95%; margin:0 auto; clear:both;height: auto;}
+/*#header, #footer, #nav , #container { width:95%; margin:0 auto; clear:both;height: auto;}*/
 #nav {border-bottom:1px solid #ccc; padding:1em;}
 #content {}
-main {width:60%; float:left;}
-#right_sidebar {width: 30%; float:right;}
+/*main {width:60%; float:left;}
+#right_sidebar {width: 30%; float:right;}*/
 blockquote > cite {
 	text-transform: uppercase;
 }
-
-.bkg_red{background-color: #C00;}

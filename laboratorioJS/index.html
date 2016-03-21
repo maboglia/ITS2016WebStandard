@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">   
+		<title>mauro bogliaccino</title>
+
+ <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+    body {
+        padding-top: 70px;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<header id="header">
+
+
+<!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Start Bootstrap</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#home" onclick="restore_home()" title="">home</a>
+                    </li>
+                    <li>
+						<a href="#footer" onclick="restore_main()"  title="">main</a>                    </li>
+                    <li>
+						<a href="#footer" onclick="restore_footer()"  title="">footer</a>                    </li>
+	                <li class="dropdown">
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+			          <ul class="dropdown-menu">
+			            <li><a href="#">Action</a></li>
+			            <li><a href="#">Another action</a></li>
+			            <li><a href="#">Something else here</a></li>
+			            <li role="separator" class="divider"></li>
+			            <li><a href="#">Separated link</a></li>
+			            <li role="separator" class="divider"></li>
+			            <li><a href="#">One more separated link</a></li>
+			          </ul>
+			        </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+
+		</header> 
+
+
+
+
+
+<!-- inizio container -->
+	<div id="container" class="container">
+		<main id="main">
+
+<!-- modello pagina
+
+			<section id="" class="">
+				<header>
+					<h2></h2>
+				</header>
+				<article>
+				</article>
+				<footer>
+				</footer>
+			</section>
+ -->
+			<section id="demo"  class="jumbotron col-md-8">
+				<header>
+					<h2 id="demoSectionTitle">Section Header demo</h2>
+				</header>
+				<article>
+					<h2 id="demoArticleTitle">
+						Section Article
+					</h2>
+					<p id="first_paragraph">Articolo</p>
+
+					<img src="images/mauro2.png" class="img-circle img-responsive" alt="Responsive image" />
+
+					<p id="second_paragraph"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+				</article>
+				<footer>
+					<h2 id="demoFooterTitle">Section footer</h2>
+				</footer>
+			</section>
+		</main>
+
+		<aside id="right_sidebar" class="col-md-4">
+			<section>
+				<header>
+					<h2>funzioni javascript</h2>
+				</header>
+				<ul>
+					<li><a href="#" onclick="alert('hello world!')" title="">alert</a></li>
+					<li>console 
+						<a href="#" onclick="console.log('hello world!')" title="">log</a> 
+						<a href="#" onclick="console.warn('hello world!')" title="">warn</a> 
+						<a href="#" onclick="console.error('hello world!')" title="">error</a> 
+					</li>
+					
+
+					<li><a href="#" onclick="modificaDOM_1()" title="">Modifica DOM</a></li>
+
+					<li><a href="#" onclick="infoDOM_0()" title="">Info DOM</a></li>
+					<li><a href="#" onclick="Calcola()" title="">Operazioni aritmetiche con 5 e 4</a></li>
+					<li><a href="#" onclick="CalcolaTable()" title="">Tavola pitagorica</a></li>
+					<li><a href="#" onclick="Quadrati()" title="">Ciclo FOR - Calcola quadrati</a></li>
+					<li><a href="#" onclick="TestaCroce()" title="">Ciclo WHILE - Testa o croce</a></li>
+					<li><a href="#" onclick="Divisore35()" title="">Ciclo FOR - Divisore35</a></li>
+					<li><a href="#" onclick="arrayCitta()" title="">Ciclo FOR - Citt&agrave;</a></li>
+					<li><a href="#" onclick="arrayCitta()" title="">Ciclo FOR - Nomi</a></li>
+					<li><a href="#" onclick="promptColori()" title="">SWITCH - Prompt Colori</a></li>
+					<li><a href="#" onclick="presentaStudente()">oggetto JS</a></li>
+					<li><a href="#" onclick="swapImage()">slideshow JS</a></li>
+
+
+				</ul>
+			</section>
+		</aside>
+	</div>	
+<!-- fine container -->
+
+		<footer id="footer">
+			
+			<h2>Main footer</h2>
+			
+		</footer>
+    <!-- /.container -->
+
+    <!-- jQuery Version 1.11.1 -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+	<script src="js/myscript.js"></script>	
+
+	</body>
+</html>
