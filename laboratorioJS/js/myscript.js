@@ -133,7 +133,7 @@ var orderedLists = document.getElementsByTagName("ol");
 var mainContent = document.getElementsByTagName("main");
 
 //combinati
-var linkNav = document.getElementById("nav").getElementsByTagName("a");
+//var linkNav = document.getElementById("nav").getElementsByTagName("a");
 var linkSide = document.getElementById("right_sidebar").getElementsByTagName("a");
 
 
@@ -210,7 +210,7 @@ console.log("Ordered lists: ", orderedLists.length);
 console.log("Unordered lists: ", unorderedLists.length);
 
 // elementi combinati
-console.log("Link  in mainNav: ", linkNav.length);
+//console.log("Link  in mainNav: ", linkNav.length);
 console.log("Link  in sidebar: ", linkSide.length);
 
 }
@@ -506,15 +506,58 @@ var studente = {
 //----------------------------costruisco slideshow con setInterval()------
 
 function swapImage(){
-	var miaImg = document.getElementsByTagName("img");
+	var miaImg = document.getElementById("fotoCopertina");
 
-	alert(miaImg.getAttribute("src"));
-
+	if(miaImg.src.match("fantascienzax.jpg")){
+		// alert("corrisponde");
+		miaImg.src = "images/effetto_noir.jpg";
+	}
+	else
+		miaImg.src = "images/fantascienzax.jpg";
 	
+
+}
+	//dati
+	//dati
+	var indiceImmagini = 0;
+	var miaImg = document.getElementById("fotoCopertina");
+
+function slideshow(){
+	
+	var mieImmagini = [
+		'images/BMWF800R1.jpg',
+		'images/BMWF800R2.jpg',
+		'images/BMWF800R3.jpg',
+		'images/BMWF800R4.jpg'
+	];
+	
+
+	miaImg.setAttribute("src", mieImmagini[indiceImmagini]);
+
+	indiceImmagini++;
+	console.log(indiceImmagini);
+
+	if(indiceImmagini>=mieImmagini.length){
+		indiceImmagini = 0;
+	}
 }
 
 
-//------------------------------------------------
+// setTimeout(swapImage, 5000);
+var intervallo = setInterval(slideshow, 3000);
+
+miaImg.onclick = function(){
+	clearInterval(intervallo);
+	console.warn('hai bloccato lo slideshow');
+};
+
+//------------------------inizio jquery-------------
+
+$("#hello_jquery").click(function(event) {
+	alert("hello jquery");
+});
+
+
 //------------------------------------------------
 //------------------------------------------------
 //------------------------------------------------
