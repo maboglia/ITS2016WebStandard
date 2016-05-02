@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">   
+		<title>JavaScript Lab</title>
+
+ <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+    body {
+        padding-top: 70px;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<header id="header">
+
+
+<!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">JavaScript Lab</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#home" onclick="restore_home()" title="">home</a>
+                    </li>
+                    <li>
+						<a href="#" id="loadHtml" title="">provaHtml</a>                    </li>
+						<li>
+						<a href="myBootstrap.html" id="" title="">myBootstrap</a>                    </li>
+                    <li>
+						<a href="#footer" onclick="restore_footer()"  title="">footer</a>                    </li>
+	                <li class="dropdown">
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+			          <ul class="dropdown-menu">
+			            <li><a href="#">Action</a></li>
+			            <li><a href="#" id="showJS">Javascript</a></li>
+			            <li><a href="#" id="showJQuery">JQuery</a></li>
+			            <li role="separator" class="divider"></li>
+			            <li><a href="#">Separated link</a></li>
+			            <li role="separator" class="divider"></li>
+			            <li><a href="#">One more separated link</a></li>
+			          </ul>
+			        </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+
+		</header> 
+
+
+
+
+
+<!-- inizio container -->
+	<div id="container" class="container">
+		<main id="main">
+
+			<div id="messaggio" class="panel panel-primary hidden">
+			  <div class="panel-body">
+			    Panel content
+			  </div>
+			  <div class="panel-footer">Panel footer</div>
+
+			</div>
+
+
+<!-- modello pagina
+
+			<section id="" class="">
+				<header>
+					<h2></h2>
+				</header>
+				<article>
+				</article>
+				<footer>
+				</footer>
+			</section>
+ -->
+			<section id="demo"  class="jumbotron col-md-8">
+				<header>
+					<h2 id="demoSectionTitle">Section Header demo</h2>
+				</header>
+				<article>
+					<h2 id="demoArticleTitle">
+						Section Article
+					</h2>
+					<p id="first_paragraph">Articolo</p>
+
+					<style type="text/css">
+						.evidenzia {background-color: yellow;}
+						.evidenziaNO {background-color: none;}
+						#msgUser {display:none;}
+					</style>
+
+
+					<form method="post" action="prova.html">
+					  <div class="form-group">
+					    <label for="email">Email</label>
+					    <input type="text" class="form-control evidenziaNO" name="username" id="username" placeholder="max 8 caratteri" onchange="checkUsername();">
+					    <span id="msgUser">quellochevoglio</span>
+
+					  </div>
+					  <div class="form-group">
+					    <label for="password">Password</label>
+					    <input type="password" class="form-control evidenziaNO" id="password" name="password" placeholder="Password">
+					  </div>
+					  <input type="submit" class="btn btn-default"name="invia" value="invia" />
+					 
+					</form>
+
+					<script type="text/javascript">
+						function checkUsername(){
+							var user = $('#username').val();
+
+							if (user == '' || user.length>8){
+								$('#username').removeClass('evidenziaNO').addClass('evidenzia');
+								$('#msgUser').text('Devi inserire un nome utente max di 8 caratteri,' + user + ' non va bene').show();
+								return false;
+							}
+							else
+							{
+
+								trovato = false;
+
+								elencoUtenti = [ "pera", "mela", "banana" ];
+
+								for (var i = 0; i < elencoUtenti.length; i++) {
+									if(elencoUtenti[i]==user) {
+
+										trovato=true; 
+										break;
+									}
+								};
+
+
+								if(!trovato){
+
+								$('#username').removeClass('evidenziaNO').addClass('evidenzia');
+								$('#msgUser').text('utente sconosciuto').show();
+								return false;
+								}
+								else
+								{
+
+
+								$('#username').removeClass('evidenzia').addClass('evidenziaNO');
+								$('#msgUser').hide();
+								return true;									
+								}
+
+							}
+						};
+					</script>
+					<img src="images/banksy0.jpg" class="img-responsive img-rounded" alt="Responsive image" id="fotoCopertina" />
+
+					<p id="second_paragraph"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						<br/>
+
+					Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+				</article>
+				<footer>
+					<h2 id="demoFooterTitle">Section footer</h2>
+				</footer>
+			</section>
+		</main>
+
+		<aside id="right_sidebar" class="col-md-4">
+			<section id="funzioni_javascript">
+				<header>
+					<h2>funzioni javascript</h2>
+				</header>
+
+				<p class="title">Dialog</p>
+
+				<div class="btn-group btn-group-sm" role="group" aria-label="js func">
+					
+					<button type="button" class="btn btn-default" onclick="alert('hello world!')" title="">alert</button>
+
+					<button type="button" class="btn btn-default" onclick="promptColori()" title="SWITCH - Prompt Colori">Prompt</button>
+				</div>
+				<p class="title">Console</p>
+
+				<div class="btn-group btn-group-sm" role="group" aria-label="js func">
+
+
+					<button type="button" class="btn btn-default" onclick="console.log('hello world!')" title="">log</button> 
+					<button type="button" class="btn btn-default" onclick="console.warn('hello world!')" title="">warn</button> 
+					<button type="button" class="btn btn-default" onclick="console.error('hello world!')" title="">error</button> 
+					
+				</div>
+				<p class="title">DOM</p>
+				<div class="btn-group btn-group-sm" role="group" aria-label="js func">
+					<button type="button" class="btn btn-default" onclick="infoDOM_0()" title="">Info</button>
+					<button type="button" class="btn btn-default" onclick="modificaDOM_1()" title="">Modifica</button>
+					<button type="button" class="btn btn-default" onclick="restore_home()" title="">Ripristina</button>
+				</div>
+				<p class="title">Operazioni</p>
+
+				<div class="btn-group btn-group-sm" role="group" aria-label="js func">
+
+					<button type="button" class="btn btn-default" onclick="Calcola()" title="">Operazioni aritmetiche</button>
+					<button type="button" class="btn btn-default" onclick="CalcolaTable()" title="">Tavola pitagorica</button>
+
+				</div>
+				<p class="title">Cicli</p>
+					
+				<div class="btn-group btn-group-sm" role="group" aria-label="Ciclo FOR">
+					<button type="button" class="btn btn-default" onclick="Quadrati()" title="Ciclo FOR">Quadrati</button>
+					<button type="button" class="btn btn-default" onclick="Divisore35()" title="Ciclo FOR">3 &amp; 5</button>
+					<button type="button" class="btn btn-default" onclick="arrayCitta()" title="Ciclo FOR">Citt&agrave;</button>
+					<button type="button" class="btn btn-default" onclick="arrayCitta()" title="Ciclo FOR">Nomi</button>
+				</div>
+					
+				<div class="btn-group btn-group-sm" role="group" aria-label="js func">
+					<button type="button" class="btn btn-default" onclick="TestaCroce()" title="Ciclo WHILE">Testa o croce</button>
+					<button type="button" class="btn btn-default" onclick="presentaStudente()">oggetto JS</button>
+
+					<button type="button" class="btn btn-default" onclick="swapImage()">slideshow</button>
+				</div>
+			</section>
+
+		<section id="funzioni_JQuery">
+				<header>
+					<h2>funzioni JQuery</h2>
+				</header>
+					
+				<div class="btn-group btn-group-sm" role="group" aria-label="js func">
+					<button type="button" class="btn btn-default" id="hello_jquery" title="">hello jquery</button>
+					<button type="button" class="btn btn-default" id="elenco_allievi" title="">elenco_allievi</button>
+				</div>
+					
+				<div class="btn-group btn-group-sm " role="group" aria-label="js func">
+					<button type="button" class="btn btn-default" id="showFoto" title="">mostra foto</button>
+					<button type="button" class="btn btn-default" id="hideFoto" title="">nascondi foto</button>
+					<button type="button" class="btn btn-default" id="toggleFoto" title="">toggleFoto</button>
+			</div>
+					
+				<div class="btn-group btn-group-sm" role="group" aria-label="js func">
+					<button type="button" class="btn btn-default" id="leggiJSON" title="">JSON </button>
+					<button type="button" class="btn btn-default" id="removeClass" title="">remove class </button>
+					<button type="button" class="btn btn-default" id="animazioneIMG" title="">anime </button>
+					<button type="button" class="btn btn-default" id="corsiITS" title="">Corsi ITS </button>
+
+				</div>
+			</section
+
+		</aside>
+	</div>	
+<!-- fine container -->
+
+		<footer id="footer">
+			
+			<h2>Main footer</h2>
+			
+		</footer>
+    <!-- /.container -->
+
+    <!-- jQuery Version 1.11.1 -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+	<script src="js/myscript.js"></script>	
+
+	</body>
+</html>
