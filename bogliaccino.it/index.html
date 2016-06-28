@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="My Personal WebSite">
+    <meta name="author" content="Mauro Bogliaccino">
+
+    <title>Corso frontend avanzato</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+    body {
+        padding-top: 70px;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+
+
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Mauro Bogliaccino</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Services</a>
+                    </li>
+                     <li role="presentation" class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                          Galleria JQuery <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="#">mostra/nascondi</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">mostra/nascondi</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">mostra/nascondi</a>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li>
+                                            <a href="#">slide</a>
+                                        </li>
+                        </ul>
+                      </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12 col-sm-6 ">
+                <h1>Palestra JQuery</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 jumbotron" id="lateraleSx">
+                <h2>titoletto</h2>
+
+                <p id="primooParagrafo">test test test</p>
+                <p><input type="text" placeholder="scrivi qui" id="editText1" /></p>
+                <p id="secondoParagrafo">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+
+
+
+
+                <button id="btn1" type="button" class="btn btn-danger">Bottone 1</button>
+                <button id="btn2" type="button" class="btn btn-primary">Bottone 2</button>
+
+<div class="cycle-slideshow" id="slideshow"
+    data-cycle-fx="scrollHorz"
+    data-cycle-timeout="2000"
+    data-cycle-slides="> div"
+
+    >
+   <!--  <img class="img-responsive img-circle" src="http://malsup.github.io/images/p1.jpg">
+    <img class="img-responsive img-circle" src="http://malsup.github.io/images/p2.jpg">
+    <img class="img-responsive img-circle" src="http://malsup.github.io/images/p3.jpg">
+    <img class="img-responsive img-circle" src="http://malsup.github.io/images/p4.jpg"> -->
+</div>
+<!-- 
+<div class="center">
+    <a class="btn btn-warning" href=# id="prev">Prev</a> 
+    <a class="btn btn-warning" href=# id="next">Next</a>
+</div> -->
+
+
+            </div>
+            <div class="col-md-3 col-md-offset-1 hidden-xs" id="lateraleDx">
+                <img src="images/banksy0.jpg" class="img-responsive img-rounded" alt="Responsive image" /></div>
+        </div>
+
+
+        <div class="row text-center features">
+            <div id="primoBox" class="col-md-4 col-xs-10 col-xs-offset-1 col-sm-offset-0"><i class="glyphicon glyphicon-pencil"></i><h3>titoluccio</h3><p>test test test</p></div>
+            <div class="col-md-4 col-xs-6"><i class="glyphicon glyphicon-plus-sign"></i><h3>titoluccio</h3><p>test test test</p></div>
+            <div class="col-md-4 col-xs-6"><i class="glyphicon glyphicon-plane"></i><h3>titoluccio</h3><p>test test test</p></div>
+        </div>
+
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery Version 1.11.1 -->
+    <script src="js/jquery.js"></script>
+
+    <!-- JQuery Cycle JavaScript -->
+
+<script src="http://malsup.github.com/jquery.cycle2.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+
+
+    <!-- My JavaScript -->
+    <script src="js/myJquery.js"></script>
+
+</body>
+
+</html>

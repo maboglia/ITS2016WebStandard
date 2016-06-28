@@ -1,0 +1,116 @@
+{
+  "elenco_allievi": [
+    {
+      "matricola": "15",
+      "nome": "Roberto",
+      "cognome": "Quartero",
+      "residenza": "Alessandria",
+      "image": "banksy0.jpg",
+      "data_nascita": "1996-07-01",
+      "job_title": "perito informatico",
+      "skill": [
+        "java",
+        "html",
+        "visual basic",
+        "assembly"
+      ],
+      "programmi": [
+        "eclipse",
+        "visual studio",
+        "bluej"
+      ],
+      "corso_ITS": {
+        "Materia_pref": "Marketing",
+        "Materia_pref2": "Inglese",
+        "Materia_pref3": "Base di dati"
+      }
+    },
+
+  {
+    "matricola":"16",
+    "nome":"Andrea",
+    "cognome":"Quatrale",
+    "corso":"Mobile App Design",
+    "residenza":"Torino",
+    "image":"banksy1.jpg",
+    "data_nascita":"26-09-1996",
+    "job_title":"Developer",
+    
+    "skills":[
+        "HTML",
+        "Java",
+        "SQL"
+      ],
+      
+      "programmi":[
+        "Android Studio",
+        "Visual Studio"
+      ],
+        
+        "corso_ITS": {
+          "materia_preferita":"Java Android",
+          "materia_preferita2":".NET Framework",
+          "materia_preferita3":"Interfacce utente"
+     }
+   },
+
+ {
+      "matricola": "18",
+      "nome": "Luca",
+      "cognome": "Scudeler",
+      "residenza": "Torino",
+      "image": "banksy2.jpg",
+      "data_nascita": "1996-05-09",
+      "job_title": "studente",
+      "skill": [
+        "HTML",
+        "UX",
+        "Visual Design"
+      ],
+      "programmi": [
+        "Notepad++",
+        "Photoshop",
+        "Illustrator"
+      ],
+      "corso_ITS": {
+        "materia_pref" : "???",
+        "materia_pref2" : "Error 404",
+        "materia_pref3" : "File not found"
+      }
+    },
+
+        {
+  "matricola" : "24",
+  "nome" : "Vanessa",
+  "cognome" : "Libora",
+  "residenza" : "Torino",
+  "image" : "banksy4.jpg",
+  "data_nascita" : "1984-01-14",
+  "job_title" : "UI designer ",
+  "skills" : 
+  [
+    "Linguaggio C",
+    "Html5",
+    "Tipografia"
+  ],
+  "programmi":
+  [
+    "photoshop",
+    "illustrator",
+    "indesign",
+    "eclipse"
+  ],
+  "corso ITS":{
+    "materia pref" : "Algoritmi",
+    "materia pref2" : "Tipografia",
+    "materia pref3" : "Java Android"
+  }
+    }
+
+
+
+
+
+
+  ]
+}
